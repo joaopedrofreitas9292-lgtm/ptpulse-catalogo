@@ -3,26 +3,8 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PT Pulse | Catálogo</title><link rel="stylesheet" href="style.css">
 </head><body>
-<header class="topbar">
-  <button class="menu-btn">☰</button>
-  <a class="brand" href="#inicio"><img src="https://cdn-shopkit.com/usercontent/ptpulse/media/images/2d09747-074057-pt-pulse-autocolante.png" alt="PT Pulse"></a>
-  <div class="top-search"><input id="search" placeholder="Pesquisar produtos..." oninput="filterProducts()"><span>⌕</span></div>
-  <nav><a href="#categorias">Vestuário</a><a href="#categorias">Brindes</a><a href="#categorias">Tecnologia</a><a href="#categorias">Escrita</a><a href="#categorias">Drinkware</a><a href="#categorias">Mochilas</a><a href="#categorias">Casa & Decoração</a></nav>
-  <div class="actions"><span>♙<small>Entrar</small></span><span>♡<small>Favoritos</small></span><button onclick="openQuote()">🛒<b id="count">0</b><small>Orçamento</small></button></div>
-</header>
+<header class="topbar"><button class="menu-btn">☰</button><a class="brand" href="#inicio"><img src="https://cdn-shopkit.com/usercontent/ptpulse/media/images/2d09747-074057-pt-pulse-autocolante.png" alt="PT Pulse"></a><div class="top-search"><input id="search" placeholder="Pesquisar produtos..." oninput="filterProducts()"><span>⌕</span></div><nav><a href="#categorias">Vestuário</a><a href="#categorias">Brindes</a><a href="#categorias">Tecnologia</a><a href="#categorias">Escrita</a><a href="#categorias">Drinkware</a><a href="#categorias">Mochilas</a><a href="#categorias">Casa & Decoração</a></nav><div class="actions"><span>♙<small>Entrar</small></span><span>♡<small>Favoritos</small></span><button onclick="openQuote()">🛒<b id="count">0</b><small>Orçamento</small></button></div></header>
 <div class="mobile-nav"><button onclick="setCategory('Todos')">☰ Todas as categorias</button><button onclick="setCategory('Vestuário')">Vestuário</button><button onclick="setCategory('Brindes')">Brindes</button><button onclick="setCategory('Tecnologia')">Tecnologia</button><button onclick="setCategory('Empresas')">Escrita</button><button onclick="setCategory('Mochilas')">Mochilas</button></div>
-<main id="inicio">
-<section class="hero">
-<div class="hero-copy"><h1>O TEU PROJETO,<br>A NOSSA <em>IMPRESSÃO.</em></h1><p>Vestuário, brindes e muito mais.<br>Personaliza com a tua marca!</p><button onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">Ver produtos　›</button></div>
-<div class="hero-art"><div class="yellow-splash"></div><div class="showcase shirt">PT PULSE</div><div class="showcase hoodie">PT PULSE</div><div class="showcase bottle">PT<br>PULSE</div><div class="showcase cap">PT PULSE</div><div class="showcase mug">PT PULSE</div></div>
-</section>
-<section class="quick-cats" id="categorias">
-<button onclick="setCategory('Vestuário')"><i>👕</i>Vestuário</button><button onclick="setCategory('Brindes')"><i>🎁</i>Brindes</button><button onclick="setCategory('Tecnologia')"><i>💻</i>Tecnologia</button><button onclick="setCategory('Empresas')"><i>🖊️</i>Escrita</button><button onclick="setCategory('Brindes')"><i>🥤</i>Drinkware</button><button onclick="setCategory('Mochilas')"><i>🎒</i>Mochilas</button><button onclick="setCategory('Casa')"><i>⌂</i>Casa & Decoração</button><button onclick="setCategory('Todos')"><i>▦</i>Mais</button>
-</section>
-<section class="section" id="produtos"><div class="section-head"><h2>Produtos em destaque</h2><a href="#produtos" onclick="setCategory('Todos')">Ver todos →</a></div><div id="productGrid" class="products"></div></section>
-</main>
-<div id="quotePanel" class="quote-panel"><div class="quote-head"><h3>Pedido de Orçamento</h3><button onclick="openQuote()">×</button></div><div id="quoteItems"></div><button class="send" onclick="sendQuote()">Enviar pedido</button></div>
-<button class="floating-quote" onclick="openQuote()">▣　Pedido de Orçamento <b id="mobileCount">0</b></button>
-<script src="app.js"></script><script>
-const oldAddQuote=addQuote; addQuote=function(i){oldAddQuote(i);document.getElementById('mobileCount').textContent=quote.length}
-</script></body></html>
+<main id="inicio"><section class="hero"><div class="hero-copy"><h1>O TEU PROJETO,<br>A NOSSA <em>IMPRESSÃO.</em></h1><p>Vestuário, brindes e muito mais.<br>Personaliza com a tua marca!</p><button onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">Ver produtos　›</button></div><div class="hero-art"><div class="yellow-splash"></div><div class="showcase shirt">PT PULSE</div><div class="showcase hoodie">PT PULSE</div><div class="showcase bottle">PT<br>PULSE</div><div class="showcase cap">PT PULSE</div><div class="showcase mug">PT PULSE</div></div></section><section class="quick-cats" id="categorias"><button onclick="setCategory('Vestuário')"><i>👕</i>Vestuário</button><button onclick="setCategory('Brindes')"><i>🎁</i>Brindes</button><button onclick="setCategory('Tecnologia')"><i>💻</i>Tecnologia</button><button onclick="setCategory('Empresas')"><i>🖊️</i>Escrita</button><button onclick="setCategory('Brindes')"><i>🥤</i>Drinkware</button><button onclick="setCategory('Mochilas')"><i>🎒</i>Mochilas</button><button onclick="setCategory('Casa')"><i>⌂</i>Casa & Decoração</button><button onclick="setCategory('Todos')"><i>▦</i>Mais</button></section><section class="section" id="produtos"><div class="section-head"><h2>Produtos em destaque</h2><a href="#produtos" onclick="setCategory('Todos')">Ver todos →</a></div><div id="productGrid" class="products"></div></section></main>
+<div id="quotePanel" class="quote-panel"><div class="quote-head"><h3>Pedido de Orçamento</h3><button onclick="openQuote()">×</button></div><div id="quoteItems"></div><button class="send" onclick="sendQuote()">Enviar pedido</button></div><button class="floating-quote" onclick="openQuote()">▣　Pedido de Orçamento <b id="mobileCount">0</b></button>
+<script src="th-products.js"></script><script src="catalog.js"></script></body></html>
