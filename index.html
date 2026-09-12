@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT Pulse | Catálogo de Produtos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="pulse">∿</span> PT<span>PULSE</span></div>
+  <div class="catalog-title">CATÁLOGO DE PRODUTOS<br><small>PERSONALIZÁVEIS</small></div>
+  <nav>
+    <a href="#inicio">Início</a><a href="#categorias">Vestuário</a><a href="#categorias">Brindes</a>
+    <a href="#categorias">Empresas</a><a href="#categorias">Mochilas</a><a href="#categorias">Tecnologia</a>
+  </nav>
+  <button class="quote-btn" onclick="openQuote()">Pedido <span id="count">0</span></button>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">MAIS DO QUE PRODUTOS,</p>
+    <h1>SOLUÇÕES DE<br><strong>PERSONALIZAÇÃO</strong></h1>
+    <p>Encontre produtos das marcas Makito, Tejo Brinde e JHK Shirt para personalizar com a sua imagem, negócio ou evento.</p>
+    <div class="search"><input id="search" placeholder="Pesquisar entre milhares de produtos..." oninput="filterProducts()" /><button>⌕</button></div>
+    <div class="benefits"><span>◈ Produtos das melhores marcas</span><span>◫ Stock atualizado</span><span>▣ Envio rápido</span><span>▤ Pedir orçamento</span></div>
+  </div>
+  <div class="hero-art">
+    <div class="mock hoodie">HOODIE</div><div class="mock bottle">YOUR LOGO</div><div class="mock cap">YOUR<br>LOGO</div>
+  </div>
+</section>
+
+<section class="section" id="categorias">
+  <p class="eyebrow green">CATEGORIAS EM DESTAQUE</p>
+  <div class="section-head"><div><h2>Explore as nossas categorias</h2><p>Desde vestuário a brindes, temos tudo o que precisa para personalizar.</p></div><a href="#produtos">Ver todos →</a></div>
+  <div class="categories">
+    <button onclick="setCategory('Vestuário')">👕<b>Vestuário</b><small>JHK Shirt + outros</small></button>
+    <button onclick="setCategory('Brindes')">🎁<b>Brindes</b><small>Makito + Tejo Brinde</small></button>
+    <button onclick="setCategory('Empresas')">💼<b>Empresas & Escritório</b><small>Makito + Tejo Brinde</small></button>
+    <button onclick="setCategory('Mochilas')">🎒<b>Mochilas & Bolsas</b><small>Makito + Tejo Brinde</small></button>
+    <button onclick="setCategory('Casa')">⌂<b>Casa & Lifestyle</b><small>Makito</small></button>
+    <button onclick="setCategory('Tecnologia')">◉<b>Tecnologia</b><small>Makito + Tejo Brinde</small></button>
+  </div>
+</section>
+
+<section class="suppliers"><span>PRODUTOS DAS MELHORES MARCAS E FORNECEDORES</span><b>makito</b><b>TEJO BRINDE</b><b>JHK SHIRT</b></section>
+
+<section class="section" id="produtos">
+  <p class="eyebrow green">PRODUTOS EM DESTAQUE</p>
+  <div class="section-head"><h2>Os mais procurados</h2><a href="#produtos" onclick="setCategory('Todos')">Ver todos →</a></div>
+  <div id="productGrid" class="products"></div>
+</section>
+</main>
+
+<div id="quotePanel" class="quote-panel">
+  <div class="quote-head"><h3>Pedido de orçamento</h3><button onclick="openQuote()">×</button></div>
+  <div id="quoteItems"></div>
+  <button class="send" onclick="sendQuote()">Enviar pedido</button>
+</div>
+
+<footer><span>🚚 Envio rápido</span><span>🛡 Produtos de qualidade</span><span>◉ Apoio personalizado</span><span>☆ Experiência e confiança</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
