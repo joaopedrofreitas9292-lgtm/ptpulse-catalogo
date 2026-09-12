@@ -1,65 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PT Pulse | Catálogo de Produtos</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<html lang="pt-PT"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PT Pulse | Catálogo</title><link rel="stylesheet" href="style.css">
+</head><body>
 <header class="topbar">
-  <a class="brand" href="#inicio" aria-label="PT Pulse"><img src="logo.svg" alt="PT Pulse"></a>
-  <div class="catalog-title">CATÁLOGO DE PRODUTOS<br><small>PERSONALIZÁVEIS</small></div>
-  <nav>
-    <a href="#inicio">Início</a><a href="#categorias">Vestuário</a><a href="#categorias">Brindes</a>
-    <a href="#categorias">Empresas</a><a href="#categorias">Mochilas</a><a href="#categorias">Tecnologia</a>
-  </nav>
-  <button class="quote-btn" onclick="openQuote()">Pedido <span id="count">0</span></button>
+  <button class="menu-btn">☰</button>
+  <a class="brand" href="#inicio"><img src="logo.svg" alt="PT Pulse"></a>
+  <div class="top-search"><input id="search" placeholder="Pesquisar produtos..." oninput="filterProducts()"><span>⌕</span></div>
+  <nav><a href="#categorias">Vestuário</a><a href="#categorias">Brindes</a><a href="#categorias">Tecnologia</a><a href="#categorias">Escrita</a><a href="#categorias">Drinkware</a><a href="#categorias">Mochilas</a><a href="#categorias">Casa & Decoração</a></nav>
+  <div class="actions"><span>♙<small>Entrar</small></span><span>♡<small>Favoritos</small></span><button onclick="openQuote()">🛒<b id="count">0</b><small>Orçamento</small></button></div>
 </header>
-
+<div class="mobile-nav"><button onclick="setCategory('Todos')">☰ Todas as categorias</button><button onclick="setCategory('Vestuário')">Vestuário</button><button onclick="setCategory('Brindes')">Brindes</button><button onclick="setCategory('Tecnologia')">Tecnologia</button><button onclick="setCategory('Empresas')">Escrita</button><button onclick="setCategory('Mochilas')">Mochilas</button></div>
 <main id="inicio">
 <section class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">MAIS DO QUE PRODUTOS,</p>
-    <h1>SOLUÇÕES DE<br><strong>PERSONALIZAÇÃO</strong></h1>
-    <p>Encontre produtos para personalizar com a imagem do seu negócio, grupo ou evento.</p>
-    <div class="search"><input id="search" placeholder="Pesquisar entre milhares de produtos..." oninput="filterProducts()" /><button>⌕</button></div>
-    <div class="benefits"><span>◈ Produtos das melhores marcas</span><span>◫ Stock atualizado</span><span>▣ Envio rápido</span><span>▤ Pedir orçamento</span></div>
-  </div>
-  <div class="hero-art">
-    <div class="mock hoodie">HOODIE</div><div class="mock bottle">YOUR LOGO</div><div class="mock cap">YOUR<br>LOGO</div>
-  </div>
+<div class="hero-copy"><h1>O TEU PROJETO,<br>A NOSSA <em>IMPRESSÃO.</em></h1><p>Vestuário, brindes e muito mais.<br>Personaliza com a tua marca!</p><button onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">Ver produtos　›</button></div>
+<div class="hero-art"><div class="yellow-splash"></div><div class="showcase shirt">PT PULSE</div><div class="showcase hoodie">PT PULSE</div><div class="showcase bottle">PT<br>PULSE</div><div class="showcase cap">PT PULSE</div><div class="showcase mug">PT PULSE</div></div>
 </section>
-
-<section class="section" id="categorias">
-  <p class="eyebrow green">CATEGORIAS EM DESTAQUE</p>
-  <div class="section-head"><div><h2>Explore as nossas categorias</h2><p>Desde vestuário a brindes, temos tudo o que precisa para personalizar.</p></div><a href="#produtos">Ver todos →</a></div>
-  <div class="categories">
-    <button onclick="setCategory('Vestuário')">👕<b>Vestuário</b><small>Personalizável</small></button>
-    <button onclick="setCategory('Brindes')">🎁<b>Brindes</b><small>Personalizável</small></button>
-    <button onclick="setCategory('Empresas')">💼<b>Empresas & Escritório</b><small>Personalizável</small></button>
-    <button onclick="setCategory('Mochilas')">🎒<b>Mochilas & Bolsas</b><small>Personalizável</small></button>
-    <button onclick="setCategory('Casa')">⌂<b>Casa & Lifestyle</b><small>Personalizável</small></button>
-    <button onclick="setCategory('Tecnologia')">◉<b>Tecnologia</b><small>Personalizável</small></button>
-  </div>
+<section class="quick-cats" id="categorias">
+<button onclick="setCategory('Vestuário')"><i>👕</i>Vestuário</button><button onclick="setCategory('Brindes')"><i>🎁</i>Brindes</button><button onclick="setCategory('Tecnologia')"><i>💻</i>Tecnologia</button><button onclick="setCategory('Empresas')"><i>🖊️</i>Escrita</button><button onclick="setCategory('Brindes')"><i>🥤</i>Drinkware</button><button onclick="setCategory('Mochilas')"><i>🎒</i>Mochilas</button><button onclick="setCategory('Casa')"><i>⌂</i>Casa & Decoração</button><button onclick="setCategory('Todos')"><i>▦</i>Mais</button>
 </section>
-
-
-
-<section class="section" id="produtos">
-  <p class="eyebrow green">PRODUTOS EM DESTAQUE</p>
-  <div class="section-head"><h2>Os mais procurados</h2><a href="#produtos" onclick="setCategory('Todos')">Ver todos →</a></div>
-  <div id="productGrid" class="products"></div>
-</section>
+<section class="section" id="produtos"><div class="section-head"><h2>Produtos em destaque</h2><a href="#produtos" onclick="setCategory('Todos')">Ver todos →</a></div><div id="productGrid" class="products"></div></section>
 </main>
-
-<div id="quotePanel" class="quote-panel">
-  <div class="quote-head"><h3>Pedido de orçamento</h3><button onclick="openQuote()">×</button></div>
-  <div id="quoteItems"></div>
-  <button class="send" onclick="sendQuote()">Enviar pedido</button>
-</div>
-
-<footer><span>🚚 Envio rápido</span><span>🛡 Produtos de qualidade</span><span>◉ Apoio personalizado</span><span>☆ Experiência e confiança</span></footer>
-<script src="app.js"></script>
-</body>
-</html>
+<div id="quotePanel" class="quote-panel"><div class="quote-head"><h3>Pedido de Orçamento</h3><button onclick="openQuote()">×</button></div><div id="quoteItems"></div><button class="send" onclick="sendQuote()">Enviar pedido</button></div>
+<button class="floating-quote" onclick="openQuote()">▣　Pedido de Orçamento <b id="mobileCount">0</b></button>
+<script src="app.js"></script><script>
+const oldAddQuote=addQuote; addQuote=function(i){oldAddQuote(i);document.getElementById('mobileCount').textContent=quote.length}
+</script></body></html>
