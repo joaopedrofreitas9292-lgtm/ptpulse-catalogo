@@ -1,0 +1,1 @@
+window.thProducts="+json.dumps(entries,ensure_ascii=False,separators=(',',':'))+";
