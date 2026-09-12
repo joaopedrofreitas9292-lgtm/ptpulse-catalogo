@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180"><defs><filter id="s"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-opacity=".35"/></filter></defs><rect width="600" height="180" rx="40" fill="#090b0c"/><g filter="url(#s)" font-family="Arial Black,Arial,sans-serif" font-style="italic" font-weight="900"><text x="35" y="122" font-size="105" fill="#ffd91a" stroke="#111" stroke-width="7">PT PULSE</text></g><circle cx="540" cy="52" r="35" fill="#ffd91a"/><path d="M530 35h25v12h-10v32h-15z" fill="#111"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-label="PT Pulse">
+<defs>
+ <pattern id="stickers" width="64" height="64" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)">
+  <rect width="64" height="64" fill="#17191b"/>
+  <path d="M5 18h30M18 5v30M42 38l16 16M45 8l12 10M8 52l20-8" stroke="#d7d7d7" stroke-width="3" opacity=".65"/>
+  <circle cx="48" cy="18" r="8" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/>
+ </pattern>
+ <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#000" flood-opacity=".75"/></filter>
+</defs>
+<path d="M40 110C55 48 110 18 180 38C225 4 315 20 350 54C410 20 490 22 530 55C600 30 675 62 682 112C690 170 620 198 555 185C500 215 415 196 370 178C320 205 245 198 200 180C118 203 32 172 40 110Z" fill="url(#stickers)" stroke="#050505" stroke-width="10"/>
+<g filter="url(#shadow)" fill="#ffdf1a" stroke="#050505" stroke-width="5" paint-order="stroke">
+ <text x="73" y="148" font-family="Arial Black,Arial,sans-serif" font-size="104" font-style="italic" font-weight="900" letter-spacing="-8">PT</text>
+ <text x="245" y="148" font-family="Arial Black,Arial,sans-serif" font-size="98" font-style="italic" font-weight="900" letter-spacing="-7">PULSE</text>
+</g>
+<circle cx="625" cy="58" r="42" fill="#ffdf1a" stroke="#050505" stroke-width="8"/>
+<path d="M606 38h34c14 0 25 10 25 24 0 11-7 20-17 23l19 29h-28l-17-27h-6v27h-23V38Zm23 18h-13v14h13c5 0 9-3 9-7s-4-7-9-7Z" fill="#111"/>
+</svg>
